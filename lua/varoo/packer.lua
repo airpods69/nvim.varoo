@@ -28,9 +28,12 @@ return require('packer').startup(function(use)
 
 			-- Snippets
 			{'L3MON4D3/LuaSnip'},
-			{'rafamadriz/friendly-snippets'},
+			{'honza/vim-snippets'},
 		}
 	}
+
+	use "windwp/nvim-autopairs"
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
 	use {
 		'numToStr/Comment.nvim',
@@ -38,5 +41,8 @@ return require('packer').startup(function(use)
 			require('Comment').setup()
 		end
 	}
+
+	use 'lervag/vimtex'
+	use 'img-paste-devs/img-paste.vim'
 end)
 

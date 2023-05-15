@@ -9,6 +9,7 @@ set.nu = true
 set.relativenumber = true
 
 set.smartindent = true
+set.wrap = false
 
 set.swapfile = false
 set.backup = false
