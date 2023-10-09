@@ -1,12 +1,18 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
-lsp.ensure_installed({
-  'tsserver',
-  'pyright',
-  'clangd',
-  'rust_analyzer',
-  'eslint',
+require('mason').setup {}
+require('mason-lspconfig').setup({
+	ensure_installed = {
+		'tsserver',
+		'pyright',
+		'clangd',
+		'rust_analyzer',
+		'eslint'
+	},
+	handlers = {
+		lsp.default_setup
+	}
 })
 
 lsp.set_preferences({
@@ -20,6 +26,9 @@ lsp.set_preferences({
 })
 
 local cmp = require('cmp')
+local cmp_action = lsp.cmp_action()
+
+
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -29,8 +38,12 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-e>'] = cmp.mapping.abort(),
 })
 
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+cmp.setup({
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+	mapping = cmp_mappings
 })
 
 lsp.on_attach(function(client, bufnr)

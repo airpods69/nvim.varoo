@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 	use "windwp/nvim-autopairs"
 	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	use "folke/zen-mode.nvim"
+	use "folke/twilight.nvim"
 
 	use {
 		'numToStr/Comment.nvim',
@@ -56,5 +57,7 @@ return require('packer').startup(function(use)
 
 	use 'lervag/vimtex'
 	use 'postfen/clipboard-image.nvim'
+	use 'epwalsh/obsidian.nvim'
+	-- use 'christoomey/vim-tmux-navigator'
 end)
 
