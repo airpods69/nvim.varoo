@@ -1,6 +1,7 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
+
 require('mason').setup {}
 require('mason-lspconfig').setup({
 	ensure_installed = {
@@ -28,7 +29,6 @@ lsp.set_preferences({
 local cmp = require('cmp')
 local cmp_action = lsp.cmp_action()
 
-
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -36,6 +36,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<CR>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
   ['<C-e>'] = cmp.mapping.abort(),
+  ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+  ['<C-f>'] = cmp.mapping.scroll_docs(4),
 })
 
 cmp.setup({
@@ -43,8 +45,27 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
-	mapping = cmp_mappings
+	mapping = cmp_mappings,
+	expand = function(args) 
+		require('luasnip').lsp_expand(args.body)
+	end,
+	sources = {
+		{name = 'nvim_lsp'},
+		{name = 'path'}
+	}
 })
+
+
+cmp.setup.cmdline(':', {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = 'path' }
+	}, {
+		{ name = 'cmdline' }
+	})
+})
+
+
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}

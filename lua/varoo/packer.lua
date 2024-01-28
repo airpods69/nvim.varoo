@@ -54,13 +54,14 @@ return require('packer').startup(function(use)
 	}
 
 	use 'mfussenegger/nvim-dap'
+	use 'mfussenegger/nvim-dap-python'
 
 	use 'lervag/vimtex'
 	use 'postfen/clipboard-image.nvim'
-	use 'epwalsh/obsidian.nvim'
 	use 'alexghergh/nvim-tmux-navigation'
 	use {'vlime/vlime', rtp = 'vim'}
 	use 'FabijanZulj/blame.nvim'
+	use 'andweeb/presence.nvim'
 
 end)
 
