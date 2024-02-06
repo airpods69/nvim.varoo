@@ -1,0 +1,1 @@
+-- Define a function to print hello world in lua

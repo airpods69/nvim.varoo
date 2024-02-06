@@ -4,7 +4,9 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { 
+			{'nvim-lua/plenary.nvim'} 
+		}
 	}
 	use "EdenEast/nightfox.nvim"
 	use ("nvim-treesitter/nvim-treesitter", {run = ':TSUpdate'})
@@ -62,6 +64,8 @@ return require('packer').startup(function(use)
 	use {'vlime/vlime', rtp = 'vim'}
 	use 'FabijanZulj/blame.nvim'
 	use 'andweeb/presence.nvim'
+	use 'airpods69/yagp.nvim'
+
 
 end)
 

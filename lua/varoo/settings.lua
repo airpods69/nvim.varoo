@@ -1,5 +1,8 @@
 local set = vim.opt
 
+vim.g.python3_host_prog = '~/.config/nvim/env/bin/python'
+vim.g.loaded_python3_provider = nill
+
 set.tabstop=4
 set.softtabstop=4
 set.shiftwidth=4

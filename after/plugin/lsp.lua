@@ -9,7 +9,9 @@ require('mason-lspconfig').setup({
 		'pyright',
 		'clangd',
 		'rust_analyzer',
-		'eslint'
+		'eslint',
+		'lua_ls'
+
 	},
 	handlers = {
 		lsp.default_setup

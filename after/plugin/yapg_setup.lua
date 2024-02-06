@@ -1,0 +1,1 @@
+require("yagp").setup({})
