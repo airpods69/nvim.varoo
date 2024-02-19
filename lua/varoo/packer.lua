@@ -55,6 +55,8 @@ return require('packer').startup(function(use)
 		end
 	}
 
+	use 'epwalsh/obsidian.nvim'
+
 	use 'mfussenegger/nvim-dap'
 	use 'mfussenegger/nvim-dap-python'
 
@@ -64,7 +66,7 @@ return require('packer').startup(function(use)
 	use {'vlime/vlime', rtp = 'vim'}
 	use 'FabijanZulj/blame.nvim'
 	use 'andweeb/presence.nvim'
-	use 'airpods69/yagp.nvim'
+	-- use 'airpods69/yagp.nvim'
 
 
 end)
