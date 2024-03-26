@@ -1,5 +1,5 @@
 require("obsidian").setup({
-	dir = "/mnt/storage/PersonalWebsite/PersonalWebsite/",
+	dir = "/mnt/storage/PersonalWebsite/",
 	notes_subdir = "000 Zettelkasten",
 	-- Optional, customize how names/IDs for new notes are created.k
 	note_id_func = function(title)
