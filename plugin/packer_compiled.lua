@@ -85,6 +85,11 @@ _G.packer_plugins = {
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["blame.nvim"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/blame.nvim",
+    url = "https://github.com/FabijanZulj/blame.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -120,6 +125,12 @@ _G.packer_plugins = {
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["distant.nvim"] = {
+    config = { "\27LJ\2\0029\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\2\18\1\0\0009\0\2\0B\0\2\1K\0\1\0\nsetup\fdistant\frequire\0" },
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/distant.nvim",
+    url = "https://github.com/chipsenkbeil/distant.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -134,6 +145,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -150,10 +166,25 @@ _G.packer_plugins = {
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-tmux-navigation"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/nvim-tmux-navigation",
+    url = "https://github.com/alexghergh/nvim-tmux-navigation"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -170,6 +201,11 @@ _G.packer_plugins = {
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -180,10 +216,20 @@ _G.packer_plugins = {
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
   },
   undotree = {
     loaded = true,
@@ -205,6 +251,11 @@ _G.packer_plugins = {
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
   },
+  vlime = {
+    loaded = true,
+    path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/vlime/vim",
+    url = "https://github.com/vlime/vlime"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/airpods69/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
@@ -213,10 +264,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Runtimepath customization
+time([[Runtimepath customization]], true)
+vim.o.runtimepath = vim.o.runtimepath .. ",/home/airpods69/.local/share/nvim/site/pack/packer/start/vlime/vim"
+time([[Runtimepath customization]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\0025\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: distant.nvim
+time([[Config for distant.nvim]], true)
+try_loadstring("\27LJ\2\0029\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\2\18\1\0\0009\0\2\0B\0\2\1K\0\1\0\nsetup\fdistant\frequire\0", "config", "distant.nvim")
+time([[Config for distant.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

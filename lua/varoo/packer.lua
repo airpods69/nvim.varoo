@@ -4,11 +4,12 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { 
-			{'nvim-lua/plenary.nvim'} 
+		requires = {
+			{'nvim-lua/plenary.nvim'}
 		}
 	}
 	use "EdenEast/nightfox.nvim"
+	use "Shatur/neovim-ayu"
 	use ("nvim-treesitter/nvim-treesitter", {run = ':TSUpdate'})
 	use 'nvim-treesitter/nvim-treesitter-context'
 	use "mbbill/undotree"
