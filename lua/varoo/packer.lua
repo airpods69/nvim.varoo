@@ -42,9 +42,9 @@ return require('packer').startup(function(use)
 	use "folke/twilight.nvim"
 
 	use {
-		'numToStr/Comment.nvim',
+		'echasnovski/mini.comment',
 		config = function()
-			require('Comment').setup()
+			require('mini.comment').setup()
 		end
 	}
 
