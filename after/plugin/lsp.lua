@@ -2,6 +2,11 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 
+vim.diagnostic.config({
+  signs = true,
+  virtual_text = false
+})
+
 require('mason').setup {}
 require('mason-lspconfig').setup({
 	ensure_installed = {
@@ -9,7 +14,6 @@ require('mason-lspconfig').setup({
 		'pyright',
 		'clangd',
 		'rust_analyzer',
-		'eslint',
 		'lua_ls'
 
 	},
@@ -48,7 +52,7 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp_mappings,
-	expand = function(args) 
+	expand = function(args)
 		require('luasnip').lsp_expand(args.body)
 	end,
 	sources = {

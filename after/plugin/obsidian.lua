@@ -1,6 +1,6 @@
 require("obsidian").setup({
-	dir = "/mnt/storage/PersonalWebsite/",
-	notes_subdir = "000 Zettelkasten",
+	dir = "/home/nighteous/Documents/Vaults/DataStash/",
+	notes_subdir = "000 Notes",
 	-- Optional, customize how names/IDs for new notes are created.k
 	note_id_func = function(title)
 		-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
@@ -16,27 +16,28 @@ require("obsidian").setup({
 				suffix = suffix .. string.char(math.random(65, 90))
 			end
 		end
-		return tostring(os.time()) .. "-" .. suffix
+		return suffix
 	end,
 
 	daily_notes = {
 		-- Optional, if you keep daily notes in a separate directory.
-		folder = "Daily Life/Journal/Daily/",
+		folder = "001 Daily Life/Journal/Daily/",
 		-- Optional, if you want to change the date format for the ID of daily notes.
 		date_format = "%Y-%m-%d",
 		-- Optional, if you want to change the date format of the default alias of daily notes.
 		alias_format = "%B %-d, %Y",
-		-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-		templates = "Daily\\ Routine.md"
 	},
 
-	templates = {
-		subdir = 'Templates',
-		date_format = "%Y-%m-%d",
-	},
+	-- templates = {
+	-- 	subdir = 'Templates',
+	-- 	date_format = "%Y-%m-%d",
+	-- },
 
 	attachments = {
-		img_folder = "Images/",
+		img_folder = "100 Attachments",
 	}
 
 })
+
+vim.keymap.set("n", "<leader>os", ":ObsidianSearch<CR>")
+vim.keymap.set("n", "<leader>on", ":ObsidianNew ")

@@ -12,7 +12,7 @@ set.nu = true
 set.relativenumber = true
 
 set.smartindent = true
-set.wrap = false
+set.wrap = true
 
 set.swapfile = false
 set.backup = false
@@ -32,7 +32,7 @@ set.signcolumn = "yes"
 
 set.updatetime = 50
 
--- Status line -- 
+-- Status line --
 local fn, cmd = vim.fn, vim.cmd
 
 function my_statusline()

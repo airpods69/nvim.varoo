@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'epwalsh/obsidian.nvim'
+	use 'lukas-reineke/indent-blankline.nvim'
 
 	use 'mfussenegger/nvim-dap'
 	use 'mfussenegger/nvim-dap-python'
@@ -68,7 +69,25 @@ return require('packer').startup(function(use)
 	use 'FabijanZulj/blame.nvim'
 	use 'andweeb/presence.nvim'
 	-- use 'airpods69/yagp.nvim'
+	use {
+		"melbaldove/llm.nvim",
+		requires = { "nvim-neotest/nvim-nio" },
+		config = function()
+			require('llm'):setup()
+		end
+	}
+	use 'shaunsingh/nord.nvim'
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 
+	use "lukas-reineke/headlines.nvim"
+	use {
+		'nvim-telescope/telescope-project.nvim',
+		requires = {'nvim-telescope/telescope-file-browser.nvim', opt = true}
+	}
 
 end)
+
 
