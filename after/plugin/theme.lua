@@ -1,5 +1,6 @@
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme nordfox")
 
+require("transparent").setup({})
 
 
 require("headlines").setup({
@@ -20,7 +21,7 @@ require("headlines").setup({
 
 require('lualine').setup {
   options = {
-    theme = 'nord'
+    theme = 'iceberg_dark'
   }
 }
 

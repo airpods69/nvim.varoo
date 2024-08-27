@@ -1,5 +1,5 @@
 require("obsidian").setup({
-	dir = "/home/nighteous/Documents/Vaults/DataStash/",
+	dir = "$HOME/Documents/Vaults/DataStash/",
 	notes_subdir = "000 Notes",
 	-- Optional, customize how names/IDs for new notes are created.k
 	note_id_func = function(title)

@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+	use 'andreasvc/vim-256noir'
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = {
@@ -16,6 +17,7 @@ return require('packer').startup(function(use)
 	use "tpope/vim-fugitive"
 	use {
 		'VonHeikemen/lsp-zero.nvim',
+		tag = "v3.x",
 		requires = {
 			-- LSP Support
 			{'neovim/nvim-lspconfig'},
@@ -87,6 +89,9 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope-project.nvim',
 		requires = {'nvim-telescope/telescope-file-browser.nvim', opt = true}
 	}
+	use "lewis6991/gitsigns.nvim"
+
+	use "xiyaowong/transparent.nvim"
 
 end)
 
