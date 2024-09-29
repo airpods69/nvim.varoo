@@ -93,6 +93,11 @@ return require('packer').startup(function(use)
 	use "xiyaowong/transparent.nvim"
 	use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
 
+	use {
+		"folke/todo-comments.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	}
+
 end)
 
 
