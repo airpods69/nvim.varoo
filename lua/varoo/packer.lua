@@ -90,7 +90,7 @@ return require('packer').startup(function(use)
 		requires = {'nvim-telescope/telescope-file-browser.nvim', opt = true}
 	}
 	use "lewis6991/gitsigns.nvim"
-	use "xiyaowong/transparent.nvim"
+	-- use "xiyaowong/transparent.nvim"
 	use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
 
 end)
